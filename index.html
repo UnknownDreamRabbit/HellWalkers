@@ -1,10 +1,193 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My Website</title>
+    <title>HellWalkers - Auto-Website</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(255, 71, 87, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 80% 70%, rgba(255, 71, 87, 0.1) 0%, transparent 20%);
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(255, 71, 87, 0.1);
+            border-bottom: 3px solid #ff4757;
+            margin-bottom: 40px;
+            border-radius: 0 0 20px 20px;
+        }
+        
+        h1 {
+            color: #ff4757;
+            font-size: 4em;
+            margin: 0;
+            text-shadow: 0 0 20px #ff4757;
+            letter-spacing: 3px;
+        }
+        
+        .tagline {
+            color: #aaa;
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 71, 87, 0.3);
+            transition: all 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: #ff4757;
+            box-shadow: 0 10px 30px rgba(255, 71, 87, 0.2);
+        }
+        
+        .feature-card h3 {
+            color: #ff4757;
+            margin-top: 0;
+        }
+        
+        .tech-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 30px 0;
+            justify-content: center;
+        }
+        
+        .tech-badge {
+            background: rgba(255, 71, 87, 0.2);
+            color: #ff4757;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            border: 1px solid #ff4757;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 30px;
+            border-top: 1px solid rgba(255, 71, 87, 0.3);
+            color: #888;
+        }
+        
+        .glow {
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #ff4757; }
+            to { text-shadow: 0 0 20px #ff4757, 0 0 30px #ff4757; }
+        }
+    </style>
 </head>
 <body>
-  <h1>Hello World</h1>
-  <p>This site is hosted on GitHub Pages.</p>
+    <div class="container">
+        <header>
+            <h1 class="glow">HELLWALKERS</h1>
+            <div class="tagline">Auto-Generated Website System</div>
+        </header>
+        
+        <div class="tech-grid">
+            <span class="tech-badge">PHP</span>
+            <span class="tech-badge">Node.js</span>
+            <span class="tech-badge">MongoDB</span>
+            <span class="tech-badge">CoffeeScript</span>
+            <span class="tech-badge">Git API</span>
+            <span class="tech-badge">24-hour Security</span>
+        </div>
+        
+        <div class="features">
+            <div class="feature-card">
+                <h3>🚀 Auto-Generation</h3>
+                <p>JSON → HTML/CSS/JS conversion in real-time. Create complete web pages from simple JSON schemas.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>🔐 24-Hour Security</h3>
+                <p>API keys automatically rotate every 24 hours. Built-in validation and expiration system.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>☕ CoffeeScript Integration</h3>
+                <p>Compile CoffeeScript to JavaScript with ATOM editor support. Real-time compilation engine.</p>
+            </div>
+            
+            <div class="feature-card">
+                <h3>🔗 Git & REST API</h3>
+                <p>GitHub, GitLab, Bitbucket integration. Auto-deployment to GitHub Pages, Netlify, Vercel.</p>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin: 50px 0;">
+            <h2>Live System Running At:</h2>
+            <a href="http://localhost/auto-website-ram/" 
+               style="color: #ff4757; font-size: 1.2em; text-decoration: none; border: 2px solid #ff4757; padding: 15px 30px; border-radius: 10px; display: inline-block; margin: 20px;">
+               🌐 http://localhost/auto-website-ram/
+            </a>
+        </div>
+        
+        <footer>
+            <p>Generated by Auto-Website System • Deployed to GitHub Pages</p>
+            <p>Repository: <a href="https://github.com/UnknownDreamRabbit/HellWalkers" style="color: #ff4757;">github.com/UnknownDreamRabbit/HellWalkers</a></p>
+        </footer>
+    </div>
+    
+    <script>
+        // Add some interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.feature-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+            
+            // Animate tech badges
+            const badges = document.querySelectorAll('.tech-badge');
+            badges.forEach((badge, index) => {
+                badge.style.animationDelay = `${index * 0.1}s`;
+                badge.style.opacity = '0';
+                badge.style.animation = `fadeIn 0.5s ease forwards ${index * 0.1}s`;
+            });
+            
+            // Add CSS for fadeIn
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes fadeIn {
+                    from { opacity: 0; transform: translateY(20px); }
+                    to { opacity: 1; transform: translateY(0); }
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
 </body>
 </html>
